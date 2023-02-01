@@ -25,3 +25,37 @@ Here this table consists of countries that i visited , reason for the visit and 
 >
 > My mother always used to say: The older you get, the better you get, unless you’re a banana -_Rose_
 
+---
+
+# Code Fencing
+
+> WordPress: How to retrieve custom field data from the page?
+
+[Link](https://stackoverflow.com/questions/66293239/wordpress-how-to-retrieve-custom-field-data-from-the-page)
+
+Word Press
+```
+<h3>All Post Meta</h3>
+
+<?php 
+
+  // Get all the data 
+  $getPostCustom = get_post_custom(); 
+
+    foreach($getPostCustom as $name=>$value) {
+
+        echo "<strong>" . $name . "</strong>"."  =>  ";
+
+        foreach ($value as $nameAr=>$valueAr) {
+                echo "<br />";
+                echo $nameAr."  =>  ";
+                echo var_dump($valueAr);
+        }
+
+        echo "<br /><br />";
+
+    }
+?>
+```
+
+[Dump All Custom Fields](https://css-tricks.com/snippets/wordpress/dump-all-custom-fields)
